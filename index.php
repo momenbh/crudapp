@@ -11,9 +11,17 @@
     <title>CRUD APP</title>
   </head>
   <body>
-    <div class="container my-4 p-4 shadow"></div>
-    <h1><a href="index.php"></a>CREATE FORM</h1>
-
+    <div class="container my-4 p-4 shadow">
+    <h1 style="color:green"><a href="index.php"></a>CREATE FORM</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <input  class="form-control mb-2"type="text"name="name" placeholder="Enter your name">
+        <input  class ="form-control mb-2"type="number"name="roll" placeholder="Enter Your Roll">
+        <label for="">Upload Img</label><br>
+        <input type="file"name="upload_img" class="mb-2"><br>
+        <input type="submit" value="Add information"class="form-control bg-warning" name="btn">
+    </br>
+    </form>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

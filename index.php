@@ -1,3 +1,18 @@
+<?php
+   include("function.php");
+    
+   $objCrudAdmin = new crudApp();
+if (isset($_Post['btn'])){
+  $objCrudAdmin-> add_data($_POST );
+}
+
+
+?>
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,6 +36,31 @@
         <input type="submit" value="Add information"class="form-control bg-warning" name="btn">
     </br>
     </form>
+    </div>
+    <div class="container my-4 p-4 shadow">
+       <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ROLL</th>
+            <th>IMAGE</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>asif</td>
+            <td>10000</td>
+            <td></td>
+            <td>
+              <a href="" class="btn btn-success">Edit</a>
+              <a href="" class="btn btn-info">Delete</a>
+            </td>
+          </tr>
+        </tbody>
+       </table>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 

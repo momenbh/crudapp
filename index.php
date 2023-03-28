@@ -2,8 +2,9 @@
    include("function.php");
     
    $objCrudAdmin = new crudApp();
-if (isset($_Post['btn'])){
-  $objCrudAdmin-> add_data($_POST );
+if (isset($_POST['btn'])){
+     $return_msg = $objCrudAdmin->add_data($_POST);
+  
 }
 
 
@@ -29,8 +30,10 @@ if (isset($_Post['btn'])){
     <div class="container my-4 p-4 shadow">
     <h1 style="color:green"><a href="index.php"></a>CREATE FORM</h1>
     <form action="" method="POST" enctype="multipart/form-data">
-        <input  class="form-control mb-2"type="text"name="name" placeholder="Enter your name">
-        <input  class ="form-control mb-2"type="number"name="roll" placeholder="Enter Your Roll">
+      <?php if(isset($return_msg)){echo $return_msg;}?>
+      
+        <input  class="form-control mb-2"type="text"name="std_name" placeholder="Enter your name">
+        <input  class ="form-control mb-2"type="number"name="std_roll" placeholder="Enter Your Roll">
         <label for="">Upload Img</label><br>
         <input type="file"name="upload_img" class="mb-2"><br>
         <input type="submit" value="Add information"class="form-control bg-warning" name="btn">
